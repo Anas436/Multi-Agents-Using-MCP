@@ -61,7 +61,7 @@ python app.py
 ## 📁 Project Structure
 
 ```
-mcp-browser-agent/
+Multi-Agents-Using-MCP/
 ├── app.py                  # Main chat application with memory
 ├── main.py                 # Core MCP agent implementation
 ├── browser_mcp.json        # MCP server configuration
