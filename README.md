@@ -21,27 +21,21 @@
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/mcp-browser-agent.git
-cd mcp-browser-agent
+git clone https://github.com/Anas436/Multi-Agents-Using-MCP.git
+cd Multi-Agents-Using-MCP
 ```
 
 ### 2. Install Dependencies with UV
 ```bash
 uv sync
 ```
-
-### 3. Install Playwright Browsers
-```bash
-playwright install chromium
-```
-
-### 4. Set Up Environment Variables
+### 3. Set Up Environment Variables
 Create a `.env` file:
 ```env
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
-### 5. Configure MCP Server
+### 4. Configure MCP Server
 Update `browser_mcp.json` with your MCP server configuration:
 ```json
 {
@@ -60,27 +54,6 @@ Update `browser_mcp.json` with your MCP server configuration:
 ```bash
 python app.py
 ```
-
-### Example Commands
-
-```python
-# Navigation
-You: "Navigate to google.com and search for 'latest AI news'"
-
-# Screenshots  
-You: "Take a screenshot of the current page and save it as 'homepage.png'"
-
-# Data extraction
-You: "Extract all article titles from this Hacker News page"
-
-# Multi-step workflows
-You: "Go to YouTube, search for 'LangChain tutorial', click the first video, and get the description"
-
-# Memory-aware interactions
-You: "Remember that I'm researching quantum computing"
-You: "Now find me the top 3 research papers on that topic from arXiv"
-```
-
 ### Chat Commands
 - `exit` / `quit` - End the conversation
 - `clear` - Clear conversation history
@@ -94,12 +67,7 @@ mcp-browser-agent/
 ├── browser_mcp.json        # MCP server configuration
 ├── pyproject.toml         # Project dependencies (UV)
 ├── .env                    # API keys (gitignored)
-├── .playwright-mcp/       # Playwright MCP server files
 ├── .venv/                 # Virtual environment
-├── google_homepage.png    # Sample screenshot output
-├── snapshot.yml           # Page snapshot data
-├── google_snapshot.yml    # Google page snapshot
-├── yt_snapshot.yml        # YouTube page snapshot
 └── README.md              # This file
 ```
 
@@ -111,55 +79,11 @@ The agent features built-in conversation memory that maintains context across in
 - **State preservation**: Keeps track of browser state between queries
 - **Reduced token usage**: Smart summarization of long conversations
 
-### Tool Integration
-Through the MCP protocol, the agent can invoke browser tools like:
-- `playwright_navigate` - Navigate to URLs
-- `playwright_click` - Click elements
-- `playwright_screenshot` - Capture screenshots
-- `playwright_snapshot` - Get page accessibility tree
-- `playwright_fill` - Fill form inputs
-
 ### Performance Optimizations
 - Async/await architecture for concurrent operations
 - Max 50 steps per task to prevent infinite loops
 - Session pooling for resource efficiency
 - Automatic cleanup of browser sessions
-
-## 🔄 Example Workflow
-
-```python
-# The agent maintains context across this entire interaction:
-
-User: "Go to Wikipedia and search for 'Artificial Intelligence'"
-Agent: [Navigates, searches, takes screenshot]
-
-User: "Now scroll down and find the history section"
-Agent: [Uses memory of current page, scrolls, extracts section]
-
-User: "Save all the key dates as a JSON file"
-Agent: [Extracts dates from remembered section, creates file]
-```
-
-## 🧪 Advanced Use Cases
-
-### 1. Web Scraping Pipeline
-```python
-# Extract data from multiple pages with memory
-You: "Visit producthunt.com and remember the top 5 products"
-You: "Now go to each product page and extract pricing info"
-```
-
-### 2. Form Automation
-```python
-# Fill complex forms with remembered data
-You: "Fill this job application with my previously saved profile"
-```
-
-### 3. Testing & QA
-```python
-# Automated UI testing via natural language
-You: "Test the login flow, remember any error messages"
-```
 
 ## 🚦 Error Handling
 
@@ -207,21 +131,6 @@ Contributions are welcome! Please ensure:
 
 MIT License - See LICENSE file for details
 
-## 🙏 Acknowledgments
-
-- [Model Context Protocol](https://modelcontextprotocol.io/) - Protocol specification
-- [LangChain](https://www.langchain.com/) - LLM orchestration
-- [Groq](https://groq.com/) - Lightning-fast inference
-- [Playwright](https://playwright.dev/) - Browser automation
-
-## 📧 Contact
-
-For questions or collaboration opportunities:
-- GitHub Issues: [Create an issue](https://github.com/yourusername/mcp-browser-agent/issues)
-- Email: your.email@example.com
-
----
-
 ## 🌟 Show Your Support
 
 If this project helped you:
@@ -229,17 +138,4 @@ If this project helped you:
 - 🔄 Share with others
 - 📝 Write a blog post about your use case
 
----
 
-**Built with ❤️ for the AI automation community**
-```
-
-This README demonstrates technical depth, practical experience, and understanding of modern AI tooling - exactly what recruiters look for. It shows you can:
-
-1. **Implement production-ready code** (error handling, cleanup, configuration)
-2. **Use cutting-edge technologies** (MCP, LangChain, Groq)
-3. **Build practical solutions** (real browser automation tasks)
-4. **Document professionally** (clear structure, examples, metrics)
-5. **Think about real-world concerns** (security, performance, error handling)
-
-Make sure to replace placeholder URLs and email addresses with your actual information before sharing!
