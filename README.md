@@ -66,8 +66,6 @@ Multi-Agents-Using-MCP/
 ├── main.py                 # Core MCP agent implementation
 ├── browser_mcp.json        # MCP server configuration
 ├── pyproject.toml         # Project dependencies (UV)
-├── .env                    # API keys (gitignored)
-├── .venv/                 # Virtual environment
 └── README.md              # This file
 ```
 
