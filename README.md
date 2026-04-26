@@ -34,20 +34,6 @@ Create a `.env` file:
 ```env
 GROQ_API_KEY=your_groq_api_key_here
 ```
-
-### 4. Configure MCP Server
-Update `browser_mcp.json` with your MCP server configuration:
-```json
-{
-  "mcpServers": {
-    "playwright": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-playwright"]
-    }
-  }
-}
-```
-
 ## 🎮 Usage
 
 ### Run the Interactive Chat
