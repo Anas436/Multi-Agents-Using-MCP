@@ -136,4 +136,9 @@ If this project helped you:
 - 🔄 Share with others
 - 📝 Write a blog post about your use case
 
-
+## References
+1. [mcp-use](https://github.com/mcptutorial/mcp-use)
+2. [playwright-mcp](https://github.com/microsoft/playwright-mcp)
+3. [mcp-server-airbnb](https://github.com/openbnb-org/mcp-server-airbnb)
+4. [duckduckgo-mcp-server](https://github.com/zhsama/duckduckgo-mcp-server)
+5. [Groq](https://groq.com/)
